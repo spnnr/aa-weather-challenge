@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="app">
+        <header className="app__cities">
+          <button type="button" className="btn"><span className="btn__text btn__text--active">Ottawa</span></button>
+          <button type="button" className="btn"><span className="btn__text">Toronto</span></button>
+          <button type="button" className="btn"><span className="btn__text">Vancouver</span></button>
+        </header>
+        <main className="weather">
+          <div className="weather__today">Today</div>
+          <div className="weather__future">
+            <div className="day">other day</div>
+            <div className="day">other day</div>
+            <div className="day">other day</div>
+            <div className="day">other day</div>
+          </div>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

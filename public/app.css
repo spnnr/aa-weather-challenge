@@ -1,0 +1,106 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32KxfXBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QBi8Jow.ttf) format('truetype');
+}
+body {
+  margin: 0;
+  font-family: 'Work Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eef6fb;
+}
+button {
+  font-family: 'Work Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+#root {
+  text-align: center;
+  background-color: #eef6fb;
+  min-height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.app {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .app {
+    max-width: 767px;
+  }
+}
+.app__cities {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+}
+.btn {
+  margin: 2rem 0;
+}
+.btn__text {
+  font-size: 1.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.btn__text--active {
+  font-weight: 700;
+  color: #5fb0e8;
+}
+.weather {
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.weather__today {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.weather__future {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 5px solid white;
+}
+.day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-right: 5px solid white;
+}
+.day:last-child {
+  border-right: none;
+}
+/*# sourceMappingURL=app.css.map */
