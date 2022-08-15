@@ -1,0 +1,158 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K8nXBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32KxfXBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/worksans/v17/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QBi8Jow.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/teko/v15/LYjNdG7kmE0gfaN9oA.ttf) format('truetype');
+}
+body {
+  margin: 0;
+  font-family: 'Work Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eef6fb;
+}
+button {
+  font-family: 'Work Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+#root {
+  text-align: center;
+  background-color: #eef6fb;
+  min-height: 100vh;
+  font-weight: 200;
+}
+@media screen and (min-width: 768px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.app {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .app {
+    max-width: 767px;
+  }
+}
+.cities {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+}
+.btn {
+  margin: 2rem 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.75rem;
+  }
+}
+.btn--active {
+  font-weight: 700;
+  color: #5fb0e8;
+}
+.weather {
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  min-height: 300px;
+}
+.weather--not-available {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather__na {
+  font-size: 2rem;
+}
+.current-weather {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  border-right: none;
+  padding: 0;
+}
+.daily-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 5px solid white;
+}
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 25%;
+  font-size: 1.5rem;
+  border-right: 5px solid white;
+  padding: 1rem 0;
+}
+.weather-card:last-child {
+  border-right: none;
+}
+.conditions {
+  margin-top: 2rem;
+}
+.conditions__data {
+  display: inline-block;
+  margin-left: 1.5rem;
+  text-align: left;
+}
+.conditions__temperature {
+  font-family: 'Teko';
+  font-size: 4rem;
+  margin: -1.5rem 0;
+}
+.conditions__temperature--small {
+  font-size: 2rem;
+  margin: 0;
+}
+.conditions__icon {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=app.css.map */
