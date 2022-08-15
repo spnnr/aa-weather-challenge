@@ -1,1 +1,0 @@
-export { WeatherOtherDay } from './WeatherOtherDay';

@@ -5,14 +5,13 @@ interface CityButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     currentCity: string;
 };
 
-export class CityButton extends React.Component<CityButtonProps> {
-    render() {
-        const {name, currentCity, onClick} = this.props;
-        const active = currentCity.toLowerCase() === name.toLowerCase();
-        return (
-            <button type="button" className={`btn ${active ? 'btn--active' : '' }`} onClick={onClick}>
-                {name}
-            </button>
-        );
-    }
+export function CityButton(props: CityButtonProps) {
+    const {name, currentCity, onClick} = props;
+    const active = currentCity.toLowerCase() === name.toLowerCase();
+        
+    return (
+        <button type="button" className={`btn ${active ? 'btn--active' : '' }`} onClick={onClick}>
+            {name}
+        </button>
+    );
 }

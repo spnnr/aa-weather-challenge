@@ -1,52 +1,41 @@
 import React from "react";
-import { CityButton, WeatherToday, WeatherOtherDay } from './components';
+import { CityControl, Weather } from './components';
+import { CITIES } from './constants';
 
 type AppState = {
-  cities: string[];
-  currentCity: string;
+    cities: string[];
+    currentCity: string;
 }
 
 class App extends React.Component<{}, AppState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      cities: ['ottawa', 'toronto', 'vancouver'],
-      currentCity: 'ottawa',
+    constructor(props: {}) {
+        super(props);
+        const cities = CITIES.map(city => city.name);
+        const currentCity = CITIES[0].name || 'Add a city';
+        this.state = {
+        cities,
+        currentCity,
+        }
+        this.handleCityClick = this.handleCityClick.bind(this);
     }
-    this.handleCityClick = this.handleCityClick.bind(this);
-  }
 
-  handleCityClick(e: React.MouseEvent) {
-    const button = e.target as HTMLButtonElement;
-    this.setState({currentCity: button.innerText.toLowerCase()});
-  }
+    handleCityClick(e: React.MouseEvent) {
+        const button = e.target as HTMLButtonElement;
+        this.setState({currentCity: button.innerText.toLowerCase()});
+    }
 
-  render() {
-    const citiesList = this.state.cities.map((city: string) =>
-      <CityButton
-        key={city}
-        name={city}
-        onClick={this.handleCityClick}
-        currentCity={this.state.currentCity}
-      />
-    );
-    return (
-      <div className="app">
-        <header className="cities">
-          {citiesList}
-        </header>
-        <main className="weather">
-          <WeatherToday data={{}} />
-          <div className="weather-future">
-            <WeatherOtherDay day="Wed" data={{}} />
-            <WeatherOtherDay day="Thu" data={{}} />
-            <WeatherOtherDay day="Fri" data={{}} />
-            <WeatherOtherDay day="Sat" data={{}} />
-          </div>
-        </main>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="app">
+                <CityControl
+                activeCity={this.state.currentCity}
+                cities={this.state.cities}
+                handleCityClick={this.handleCityClick}
+                />
+                <Weather city={this.state.currentCity} />
+            </div>
+        );
+    }
 }
 
 export default App;

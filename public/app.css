@@ -91,8 +91,17 @@ button {
   border: 5px solid white;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  min-height: 300px;
 }
-.weather-today {
+.weather--not-available {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather__na {
+  font-size: 2rem;
+}
+.current-weather {
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -102,23 +111,24 @@ button {
   border-right: none;
   padding: 0;
 }
-.weather-future {
+.daily-weather {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-top: 5px solid white;
 }
-.day {
+.weather-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  flex-basis: 25%;
   font-size: 1.5rem;
   border-right: 5px solid white;
   padding: 1rem 0;
 }
-.day:last-child {
+.weather-card:last-child {
   border-right: none;
 }
 .conditions {

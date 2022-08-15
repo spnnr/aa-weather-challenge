@@ -79,32 +79,45 @@ button {
   border: 5px solid white;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  
-  &-today {
-    min-height: 300px;
+  min-height: 300px;
+
+  &--not-available {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-size: 1.75rem;
-    border-right: none;
-    padding: 0;
+    justify-content: center;
   }
-  
-  &-future {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: 5px solid white;
+
+  &__na {
+    font-size: 2rem;
   }
+
 }
 
-.day {
+.current-weather {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  border-right: none;
+  padding: 0;
+}
+
+.daily-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 5px solid white;
+}
+
+.weather-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  flex-basis: 25%;
   font-size: 1.5rem;
   border-right: 5px solid white;
   padding: 1rem 0;
